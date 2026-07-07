@@ -1,10 +1,15 @@
-public class books
+public class Book
 {
-    public int id { get; set; }
+    public Book() { }
+    public Book(string title, string author, int year)
+    {
+        this.Title = title;
+        this.Author = author;
+        this.PublishedYear = year;
+    }
+    public int ID { get; set; }
     public string Title { get; set; }
     public string Author { get; set; }
-    public string Field { get; set; }
-    public int  publishYear { get; set; }
-    public string Country { get; set; }
-    public decimal Price { get; set; }
+    public int PublishedYear { get; set; }
+    public int CategoryId { get; set; }
 }

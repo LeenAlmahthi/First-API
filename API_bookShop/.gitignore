@@ -1,0 +1,15 @@
+# Build output
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Ignore HTTP request files
+*.http
+
+# Ignore configuration files
+appsettings.json
+appsettings.Development.json
