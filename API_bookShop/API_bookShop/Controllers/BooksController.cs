@@ -35,7 +35,7 @@ public class BooksControllers : ControllerBase
             return NotFound();
         data.books.Add(book);
         data.SaveChanges();
-        return Ok(data);
+        return Ok(book);
     }
     [HttpPut("{id}")]
     public IActionResult putbook(int id, Book book)
