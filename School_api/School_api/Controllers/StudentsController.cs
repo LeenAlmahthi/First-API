@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using School_api.Model;
 
-//using School_api.Model;
 namespace School_api.Controllers
 {
     [ApiController]
@@ -11,10 +10,16 @@ namespace School_api.Controllers
     public class StudentsController : Controller
     {
         public DataContext data { get; set; }
-        public StudentsController(DataContext DB)
+        public StudentsController(DataContext DB)  
         {
             data = DB;
         }
+        /// <summary>
+        /// xml decumention 
+        /// error handle 
+        /// arthercter  (injection )
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult get_Student()
         {
@@ -23,7 +28,12 @@ namespace School_api.Controllers
                 return NotFound();
             return Ok(tmp);
         }
-        [HttpGet("{id}")]
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("{id}")] 
         public IActionResult get_Student(int id)
         {
             var tmp = data.students.Find(id);
@@ -41,14 +51,14 @@ namespace School_api.Controllers
             return Ok(s);
         }
         [HttpPut("{id}")]
-        public IActionResult update_student(Students s)
+        public IActionResult update_student(int id ,Students s)
         {
             if (s == null)
                 return NotFound();
-            var q = data.students.Find(s.Id);
+            var q = data.students.Find(id);
             if (q == null)
                 return NotFound();
-            q.Id = s.Id;
+            q.Id = id;
             q.Name = s.Name;
             q.Age = s.Age;
             data.SaveChanges();

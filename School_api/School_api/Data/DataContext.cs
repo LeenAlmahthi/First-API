@@ -1,14 +1,19 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using School_api.Model;
 namespace School_api.Data
 {
-    public class DataContext :DbContext
+    public class DataContext : IdentityDbContext<ApplicationUser>
     {
+        /*
+         AspNetUsers
+         AspNetRoles
+         AspNetUserRoles
+         AspNetUserClaims
+         AspNetUserLogins
+         AspNetUserTokens
+         */
         public DbSet<Students> students {get; set;}
-        public DataContext(DbContextOptions<DataContext> options)
-           : base(options)
-        {
-        }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;
