@@ -1,4 +1,16 @@
 $kind: http-request
-url: ""
-method: GET
+name: put
+url: /api/authApplication/Register
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"username\": \"Leen ghnaim \",\r
+
+    \    \"email\": \"Leenghn@gmail.com\",\r
+
+    \    \"password\": \"Leen2004@\"\r
+
+    }"
 order: 683105281926214

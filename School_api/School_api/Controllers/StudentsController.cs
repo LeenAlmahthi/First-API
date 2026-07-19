@@ -21,6 +21,7 @@ namespace School_api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
+        [Au]
         public IActionResult get_Student()
         {
             var tmp = data.students.ToList();

@@ -19,5 +19,7 @@ namespace School_api.Model
         PasswordHash
         PhoneNumber
         */
+     
+
     }
 }

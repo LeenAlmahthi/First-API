@@ -18,9 +18,11 @@ builder.Services.AddControllers();
 
 // Registers DataContext in the DI container, so ASP.NET Core can create it automatically whenever a controller needs it.
 builder.Services.AddDbContext<DataContext>();
+//Register Identity in Program.cs
 builder.Services
     .AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<DataContext>();
+    .AddEntityFrameworkStores<DataContext>()
+    .AddDefaultTokenProviders();
 
 // Registers the services needed for Swagger.
 builder.Services.AddEndpointsApiExplorer();  
@@ -38,7 +40,7 @@ if (app.Environment.IsDevelopment())   // if it in the developer mode runs the s
 }
 
 app.UseHttpsRedirection();  // Redirects      http://   -->   https://
-
+app.UseAuthentication();
 app.UseAuthorization();  // Authorization by middleware 
 
 app.MapControllers(); // Find all controllers and make their endpoints available
