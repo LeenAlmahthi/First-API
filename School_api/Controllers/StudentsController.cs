@@ -1,6 +1,7 @@
 ﻿using School_api.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 using School_api.Model;
 
 namespace School_api.Controllers
@@ -21,7 +22,7 @@ namespace School_api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Au]
+        [Authorize(Roles = "student")]
         public IActionResult get_Student()
         {
             var tmp = data.students.ToList();
@@ -34,7 +35,8 @@ namespace School_api.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet("{id}")] 
+        [HttpGet("{id}")]
+        [Authorize (Roles = "student")]
         public IActionResult get_Student(int id)
         {
             var tmp = data.students.Find(id);
@@ -43,6 +45,7 @@ namespace School_api.Controllers
             return Ok(tmp);
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult post_Student(Students s)
         {
             if (s == null)
@@ -52,6 +55,7 @@ namespace School_api.Controllers
             return Ok(s);
         }
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public IActionResult update_student(int id ,Students s)
         {
             if (s == null)
@@ -67,6 +71,7 @@ namespace School_api.Controllers
 
         }
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public IActionResult delete_student(int id)
         {
             var q = data.students.Find(id);

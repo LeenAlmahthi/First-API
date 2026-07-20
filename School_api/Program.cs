@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using School_api.Data;
 using School_api.Model;
+using School_api.role;
 using Microsoft.AspNetCore.Identity;
 
 /* 
@@ -30,14 +31,22 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();   // Builds the application using all the registered services.
 
+
+using (var scope = app.Services.CreateScope())
+{
+    var roleManager = scope.ServiceProvider
+        .GetRequiredService<RoleManager<IdentityRole>>();
+
+    await SeedData.SeedRoles(roleManager);
+}
 // Middleware (app.Use.  // Every request passes through the middleware pipeline before it reaches the controller.
 // can    -Read the request.      -Modify the request.         -Stop the request.    -Pass it to the next middleware.
 
-if (app.Environment.IsDevelopment())   // if it in the developer mode runs the swagger
-{
-    app.UseSwagger();   // Generate Swagger JSON
+//if (app.Environment.IsDevelopment())   // if it in the developer mode runs the swagger
+//{
+app.UseSwagger();   // Generate Swagger JSON
     app.UseSwaggerUI();   // Show the Swagger UI
-}
+//}
 
 app.UseHttpsRedirection();  // Redirects      http://   -->   https://
 app.UseAuthentication();
