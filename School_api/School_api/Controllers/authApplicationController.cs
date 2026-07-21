@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using School_api.Model;
 using School_api.Data;
 using School_api.Register;
+using School_api._login;
 namespace School_api.Controllers
 {
     [ApiController]
@@ -53,21 +54,18 @@ namespace School_api.Controllers
         }
 
         [HttpPost("Login")]
-        public async Task<IActionResult> Login(register login)
+        public async Task<IActionResult> Login_user(Login login)
         {
             if (login == null)
                 return NotFound();
-            var user = await _usermanager.FindByNameAsync(login.Username);
+            var user = await _usermanager.FindByNameAsync(login.UserName);
             if (user == null)
                 return Unauthorized("user name not found");
             var pass = await _usermanager.CheckPasswordAsync(user, login.Password);
             if (!pass)
                 return Unauthorized("Can't Login try Again");
             //return Ok("Login seccsuesful");
-            return Ok(new
-            {
-                token = "your_generated_token_here"
-            });
+            return Ok(GenerateJwt.CreateJwt(user));
         }
         [HttpDelete("Account")]
         public async Task<IActionResult> DeleteAccount(register _user)
