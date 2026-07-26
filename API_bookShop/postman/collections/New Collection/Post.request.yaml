@@ -1,4 +1,12 @@
 $kind: http-request
-url: ""
+name: Post
+url: http://localhost:5000/api/Students
 method: GET
+body:
+  type: json
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_0i8a}}"
 order: 574211271074386

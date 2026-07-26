@@ -14,12 +14,13 @@ namespace School_api.Controllers
     {
         private DataContext data;
         private UserManager<ApplicationUser> _usermanager;
-        public authApplication(UserManager<ApplicationUser> App_user, DataContext data_context)
+        private GenerateJwt _GenerateJwt;
+        public authApplication(UserManager<ApplicationUser> App_user, DataContext data_context, GenerateJwt generateJwt)
         {
             _usermanager = App_user;
             data = data_context;
+            _GenerateJwt = generateJwt;
         }
-
         [HttpPost("Register")]
         public  async Task<IActionResult> Register(register userBody)
         {
@@ -36,7 +37,6 @@ namespace School_api.Controllers
                     return BadRequest("can't add Admin");
                 //await _usermanager.AddToRoleAsync(user, "Admin");
                 var roleResult = await _usermanager.AddToRoleAsync(user, "Admin");
-
                 if (!roleResult.Succeeded)
                 {
                     return BadRequest(roleResult.Errors);
@@ -65,7 +65,8 @@ namespace School_api.Controllers
             if (!pass)
                 return Unauthorized("Can't Login try Again");
             //return Ok("Login seccsuesful");
-            return Ok(GenerateJwt.CreateJwt(user));
+            string re = await _GenerateJwt.CreateJwt(user);
+            return Ok(re);
         }
         [HttpDelete("Account")]
         public async Task<IActionResult> DeleteAccount(register _user)
@@ -77,6 +78,11 @@ namespace School_api.Controllers
             if (!re.Succeeded)
                 return BadRequest("delete is empty");
             return Ok("Seccsuesful Delete Account");          
+        }
+        [HttpGet("test-error")]
+        public IActionResult TestError()
+        {
+            throw new Exception("Testing global exception middleware");
         }
     }
 }

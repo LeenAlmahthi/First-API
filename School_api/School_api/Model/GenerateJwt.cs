@@ -12,6 +12,7 @@ using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+
 public class GenerateJwt
 {
 	private DataContext Data; 
@@ -21,20 +22,32 @@ public class GenerateJwt
 		Data = data;
 		_manageruser = _user;
 	}
-	public static string CreateJwt(ApplicationUser user)
+	public async Task<string> CreateJwt(ApplicationUser user)
 	{
         List<Claim>_claims  = new List<Claim>();
+		string role_user = string.Empty ;
+        Console.WriteLine("Before GetRoles");
 
-		Claim c1 = new Claim(ClaimTypes.NameIdentifier, user.Id);
+        var _role = await _manageruser.GetRolesAsync(user);
+
+        Console.WriteLine("After GetRoles");
+        //var _role = await _manageruser.GetRolesAsync(user);
+        if (_role.Count > 0)
+            role_user = _role[0];
+ 
+
+        Claim c1 = new Claim(ClaimTypes.NameIdentifier, user.Id);
         Claim c2 = new Claim(ClaimTypes.Email, user.Email);
 		Claim c3 = new Claim(ClaimTypes.Name, user.UserName);
+		Claim c4 = new Claim(ClaimTypes.Role,role_user);
 
 		_claims.Add(c1);
 		_claims.Add(c2);
 		_claims.Add(c3);
+		_claims.Add(c4);
 
 		// Claim is Done 
-		var key = new SymmetricSecurityKey (Encoding.UTF8.GetBytes("ThisIsMySecretKey123!"));
+		var key = new SymmetricSecurityKey (Encoding.UTF8.GetBytes("my_super_secret_key_for_school_api_123456"));
 		var algo = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 		var objJwt = 
             new JwtSecurityToken(
@@ -44,6 +57,7 @@ public class GenerateJwt
 );
 		var token = new JwtSecurityTokenHandler();
 		string str = token.WriteToken(objJwt);
+		Console.WriteLine($"Role is: {str}");
 		//return objJwt.GenerateToken(user);
 		return (str);
 	}
