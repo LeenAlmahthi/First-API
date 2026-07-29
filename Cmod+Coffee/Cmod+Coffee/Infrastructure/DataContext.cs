@@ -1,10 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Cmod___Coffee;
-namespace CmoCoffee.Data
+namespace Cmod_Coffee.Infrastructure
 {
     public class DataContext : DbContext
     {
-       public DbSet<CoffeeAttribet> Data { set; get; }
+       public DbSet<CoffeeOrder> Data { set; get; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS; 

@@ -1,7 +1,7 @@
-﻿namespace Cmod___Coffee
+﻿namespace Cmod_Coffee.Infrastructure
 
 {
-    public class CoffeeAttribet
+    public class CoffeeOrder
     {
         public int Id { set; get; }
         public string Name { set; get; } = string.Empty;
