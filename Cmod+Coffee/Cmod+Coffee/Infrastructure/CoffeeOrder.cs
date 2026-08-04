@@ -1,5 +1,4 @@
 ﻿namespace Cmod_Coffee.Infrastructure
-
 {
     public class CoffeeOrder
     {

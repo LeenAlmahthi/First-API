@@ -1,6 +1,7 @@
 using Cmod_Coffee.Application.Customer;
 using Cmod_Coffee.Application.custtomer;
 using Cmod_Coffee.Infrastructure;
+using Cmod_Coffee.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +18,9 @@ builder.Services.AddDbContext<DataContext>();
 builder.Services.AddScoped<PostCoffee>(); 
 builder.Services.AddScoped<DeleteOrder>();
 builder.Services.AddScoped<GetOrder>();
+builder.Services.AddScoped<PriceRule>(); 
+builder.Services.AddScoped<SizeRule>(); 
+builder.Services.AddScoped<OrderValidator>();
 builder.Services.AddScoped<ICoffeeRepository, SqlCoffeeRepository >();
 
 var app = builder.Build();

@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Cmod_Coffee.Application.Customer;
 using Cmod_Coffee.Application.custtomer;
+using Cmod_Coffee.DTOs;
 using Cmod_Coffee.Infrastructure;
-using Cmod_Coffee.Application.Customer;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Cmod___Coffee.Controllers
@@ -37,11 +38,13 @@ namespace Cmod___Coffee.Controllers
             return Ok(re);
         }
         [HttpPost]
-        public IActionResult MakeCoffee(CoffeeOrder info)
+        public IActionResult MakeCoffee(CreateOrderRequest info)
         {
             if (info == null)
                 return BadRequest("Invalid coffee order data.");
             var coffee = PostOrder.Post(info);
+            if (coffee == null)
+                return BadRequest("Invalid coffee order data.");
             return Ok (info);
         }
         [HttpDelete]
