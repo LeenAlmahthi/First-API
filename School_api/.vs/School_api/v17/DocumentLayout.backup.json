@@ -1,0 +1,257 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Presentation\\Controllers\\CourseController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Presentation\\Controllers\\CourseController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Application\\Interfaces\\ICourseRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Application\\Interfaces\\ICourseRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Application\\Courses\\CreateCourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Application\\Courses\\CreateCourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Infrastructure\\SqlInterface\\sqlICourseRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\SqlInterface\\sqlICourseRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\Validation\\Validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Validation\\Validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\entity\\Students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\entity\\Students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\Validation\\ValidationConfuseCourseStudents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Validation\\ValidationConfuseCourseStudents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\Validation\\ValidationAddCourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Validation\\ValidationAddCourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Presentation\\Controllers\\StudentsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Presentation\\Controllers\\StudentsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\entity\\Course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\entity\\Course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Infrastructure\\Data\\DataContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\Data\\DataContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\Validation\\ValidationPayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Domain\\Validation\\ValidationPayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 54,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAcwKUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T11:35:20.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ValidationConfuseCourseStudents.cs",
+              "DocumentMoniker": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\Validation\\ValidationConfuseCourseStudents.cs",
+              "RelativeDocumentMoniker": "Domain\\Validation\\ValidationConfuseCourseStudents.cs",
+              "ToolTip": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\Validation\\ValidationConfuseCourseStudents.cs",
+              "RelativeToolTip": "Domain\\Validation\\ValidationConfuseCourseStudents.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T11:15:06.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Validation.cs",
+              "DocumentMoniker": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\Validation\\Validation.cs",
+              "RelativeDocumentMoniker": "Domain\\Validation\\Validation.cs",
+              "ToolTip": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\Validation\\Validation.cs",
+              "RelativeToolTip": "Domain\\Validation\\Validation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T11:15:00.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "sqlICourseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Infrastructure\\SqlInterface\\sqlICourseRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\SqlInterface\\sqlICourseRepository.cs",
+              "ToolTip": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Infrastructure\\SqlInterface\\sqlICourseRepository.cs",
+              "RelativeToolTip": "Infrastructure\\SqlInterface\\sqlICourseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T10:57:29.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Presentation\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\CourseController.cs",
+              "ToolTip": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Presentation\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\CourseController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAcwCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T11:08:20.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Students.cs",
+              "DocumentMoniker": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\entity\\Students.cs",
+              "RelativeDocumentMoniker": "Domain\\entity\\Students.cs",
+              "ToolTip": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\entity\\Students.cs",
+              "RelativeToolTip": "Domain\\entity\\Students.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T10:48:26.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ValidationAddCourse.cs",
+              "DocumentMoniker": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\Validation\\ValidationAddCourse.cs",
+              "RelativeDocumentMoniker": "Domain\\Validation\\ValidationAddCourse.cs",
+              "ToolTip": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\Validation\\ValidationAddCourse.cs",
+              "RelativeToolTip": "Domain\\Validation\\ValidationAddCourse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T11:15:03.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ICourseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Application\\Interfaces\\ICourseRepository.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\ICourseRepository.cs",
+              "ToolTip": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Application\\Interfaces\\ICourseRepository.cs",
+              "RelativeToolTip": "Application\\Interfaces\\ICourseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T11:04:48.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateCourse.cs",
+              "DocumentMoniker": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Application\\Courses\\CreateCourse.cs",
+              "RelativeDocumentMoniker": "Application\\Courses\\CreateCourse.cs",
+              "ToolTip": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Application\\Courses\\CreateCourse.cs",
+              "RelativeToolTip": "Application\\Courses\\CreateCourse.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T11:04:00.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Presentation\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\StudentsController.cs",
+              "ToolTip": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Presentation\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\StudentsController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T11:00:02.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\entity\\Course.cs",
+              "RelativeDocumentMoniker": "Domain\\entity\\Course.cs",
+              "ToolTip": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\entity\\Course.cs",
+              "RelativeToolTip": "Domain\\entity\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T10:59:17.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Infrastructure\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\DataContext.cs",
+              "ToolTip": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Infrastructure\\Data\\DataContext.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\DataContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T10:49:23.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ValidationPayment.cs",
+              "DocumentMoniker": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\Validation\\ValidationPayment.cs",
+              "RelativeDocumentMoniker": "Domain\\Validation\\ValidationPayment.cs",
+              "ToolTip": "C:\\Users\\leen.almahth\\source\\repos\\First-API\\School_api\\Domain\\Validation\\ValidationPayment.cs",
+              "RelativeToolTip": "Domain\\Validation\\ValidationPayment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-06T10:49:28.235Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 372,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

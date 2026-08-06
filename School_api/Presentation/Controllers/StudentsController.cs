@@ -27,7 +27,7 @@ namespace School_api.Controllers
         [Authorize(Roles = "student")]
         public IActionResult get_Student()
         {
-            var tmp = data.students.ToList();
+            var tmp = data.Students.ToList();
             if (tmp == null)
                 return NotFound();
             return Ok(tmp);
@@ -41,7 +41,7 @@ namespace School_api.Controllers
         [Authorize (Roles = "student")]
         public IActionResult get_Student(int id)
         {
-            var tmp = data.students.Find(id);
+            var tmp = data.Students.Find(id);
             if (tmp == null)
                 return NotFound();
             return Ok(tmp);
@@ -52,7 +52,7 @@ namespace School_api.Controllers
         {
             if (s == null)
                 return NotFound();
-            data.students.Add(s);
+            data.Students.Add(s);
             data.SaveChanges();
             return Ok(s);
         }
@@ -62,7 +62,7 @@ namespace School_api.Controllers
         {
             if (s == null)
                 return NotFound();
-            var q = data.students.Find(id);
+            var q = data.Students.Find(id);
             if (q == null)
                 return NotFound();
             q.Id = id;
@@ -76,7 +76,7 @@ namespace School_api.Controllers
         [Authorize(Roles = "Admin")]
         public IActionResult delete_student(int id)
         {
-            var q = data.students.Find(id);
+            var q = data.Students.Find(id);
             if (q == null)
                 return NotFound();
             data.Remove(q);
