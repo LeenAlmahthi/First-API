@@ -12,77 +12,79 @@ namespace School_api.Controllers
     [Route("api/[Controller]")]
     public class StudentsController : Controller
     {
-        public DataContext data { get; set; }
-        public StudentsController(DataContext DB)  
+        private readonly ShowStudents showStudents;
+        public StudentsController(ShowStudents _ShowStudents)
         {
-            data = DB;
+            showStudents = _ShowStudents;
         }
-        /// <summary>
+        /// pbliv
         /// xml decumention 
         /// error handle 
         /// arthercter  (injection )
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Authorize(Roles = "student")]
+        //[Authorize(Roles = "student")]
         public IActionResult get_Student()
         {
-            var tmp = data.Students.ToList();
-            if (tmp == null)
-                return NotFound();
-            return Ok(tmp);
+            return Ok(showStudents.show());
+            
+            //var tmp = data.Students.ToList();
+            //if (tmp == null)
+            //    return NotFound();
+            //return Ok(tmp);
         }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet("{id}")]
-        [Authorize (Roles = "student")]
-        public IActionResult get_Student(int id)
-        {
-            var tmp = data.Students.Find(id);
-            if (tmp == null)
-                return NotFound();
-            return Ok(tmp);
-        }
-        [HttpPost]
-        [Authorize(Roles = "Admin")]
-        public IActionResult post_Student(Students s)
-        {
-            if (s == null)
-                return NotFound();
-            data.Students.Add(s);
-            data.SaveChanges();
-            return Ok(s);
-        }
-        [HttpPut("{id}")]
-        [Authorize(Roles = "Admin")]
-        public IActionResult update_student(int id ,Students s)
-        {
-            if (s == null)
-                return NotFound();
-            var q = data.Students.Find(id);
-            if (q == null)
-                return NotFound();
-            q.Id = id;
-            q.FirstName = s.FirstName;
-            //q.Age = s.Age;
-            data.SaveChanges();
-            return Ok(q);
+        //[HttpGet("{id}")]
+        //[Authorize (Roles = "student")]
+        //public IActionResult get_Student(int id)
+        //{
+        //    var tmp = data.Students.Find(id);
+        //    if (tmp == null)
+        //        return NotFound();
+        //    return Ok(tmp);
+        //}
+        //[HttpPost]
+        //[Authorize(Roles = "Admin")]
+        //public IActionResult post_Student(Students s)
+        //{
+        //    if (s == null)
+        //        return NotFound();
+        //    data.Students.Add(s);
+        //    data.SaveChanges();
+        //    return Ok(s);
+        //}
+        //[HttpPut("{id}")]
+        //[Authorize(Roles = "Admin")]
+        //public IActionResult update_student(int id ,Students s)
+        //{
+        //    if (s == null)
+        //        return NotFound();
+        //    var q = data.Students.Find(id);
+        //    if (q == null)
+        //        return NotFound();
+        //    q.Id = id;
+        //    q.FirstName = s.FirstName;
+        //    //q.Age = s.Age;
+        //    data.SaveChanges();
+        //    return Ok(q);
 
-        }
-        [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin")]
-        public IActionResult delete_student(int id)
-        {
-            var q = data.Students.Find(id);
-            if (q == null)
-                return NotFound();
-            data.Remove(q);
-            data.SaveChanges();
-            return Ok();
+        //}
+        //[HttpDelete("{id}")]
+        //[Authorize(Roles = "Admin")]
+        //public IActionResult delete_student(int id)
+        //{
+        //    var q = data.Students.Find(id);
+        //    if (q == null)
+        //        return NotFound();
+        //    data.Remove(q);
+        //    data.SaveChanges();
+        //    return Ok();
 
-        }
+        //}
     }
 }

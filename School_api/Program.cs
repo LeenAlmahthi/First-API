@@ -34,10 +34,12 @@ builder.Services
 
 // Repository
 builder.Services.AddScoped<ICourseRepository, sqlICourseRepository>();
+builder.Services.AddScoped<IStudentRepository, sqlIStudentRepository>();
 
 // Application services
 
 builder.Services.AddScoped<ShowCourse>(); 
+builder.Services.AddScoped<ShowStudents>();
 builder.Services.AddScoped<CreateCourse>(); 
 builder.Services.AddScoped<DeleteCourse>(); 
 builder.Services.AddScoped<ValidationConfuseCourseStudents>();

@@ -1,8 +1,10 @@
 ﻿using System;
+using Domain.entity;
 
-public class IStudentRepository
+public interface IStudentRepository
 {
-    public IStudentRepository()
-	{
-	}
+	//    public IStudentRepository()
+	//	{
+	//	}
+	public List<Students> getAllStudents();
 }
