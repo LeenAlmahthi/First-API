@@ -12,10 +12,12 @@ namespace School_api.Controllers
     [Route("api/[Controller]")]
     public class StudentsController : Controller
     {
-        private readonly ShowStudents showStudents;
-        public StudentsController(ShowStudents _ShowStudents)
+        private readonly ShowStudents showStudents; 
+        private readonly CreateStudent createStudent; 
+        public StudentsController(ShowStudents _ShowStudents, CreateStudent _createStudent)
         {
             showStudents = _ShowStudents;
+            createStudent = _createStudent;
         }
         /// pbliv
         /// xml decumention 
@@ -28,11 +30,6 @@ namespace School_api.Controllers
         public IActionResult get_Student()
         {
             return Ok(showStudents.show());
-            
-            //var tmp = data.Students.ToList();
-            //if (tmp == null)
-            //    return NotFound();
-            //return Ok(tmp);
         }
         /// <summary>
         /// 
@@ -48,16 +45,17 @@ namespace School_api.Controllers
         //        return NotFound();
         //    return Ok(tmp);
         //}
-        //[HttpPost]
+        [HttpPost]
         //[Authorize(Roles = "Admin")]
-        //public IActionResult post_Student(Students s)
-        //{
-        //    if (s == null)
-        //        return NotFound();
-        //    data.Students.Add(s);
-        //    data.SaveChanges();
-        //    return Ok(s);
-        //}
+        public IActionResult post_Student(Students s)
+        {
+            if (s == null)
+                return NotFound();
+            var re = createStudent.create(s);
+            if (re == null)
+                return NotFound();
+            return Ok(re);
+        }
         //[HttpPut("{id}")]
         //[Authorize(Roles = "Admin")]
         //public IActionResult update_student(int id ,Students s)

@@ -7,4 +7,5 @@ public interface IStudentRepository
 	//	{
 	//	}
 	public List<Students> getAllStudents();
+	public Students? createStudent(Students s);
 }

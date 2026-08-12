@@ -134,10 +134,10 @@ C:\Users\leen.almahth\source\repos\First-API\School_api\obj\Debug\net8.0\staticw
 C:\Users\leen.almahth\source\repos\First-API\School_api\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\leen.almahth\source\repos\First-API\School_api\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\leen.almahth\source\repos\First-API\School_api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\leen.almahth\source\repos\First-API\School_api\obj\Debug\net8.0\swae.build.ex.cache
 C:\Users\leen.almahth\source\repos\First-API\School_api\obj\Debug\net8.0\School_api.csproj.Up2Date
 C:\Users\leen.almahth\source\repos\First-API\School_api\obj\Debug\net8.0\School_api.dll
 C:\Users\leen.almahth\source\repos\First-API\School_api\obj\Debug\net8.0\refint\School_api.dll
 C:\Users\leen.almahth\source\repos\First-API\School_api\obj\Debug\net8.0\School_api.pdb
 C:\Users\leen.almahth\source\repos\First-API\School_api\obj\Debug\net8.0\School_api.genruntimeconfig.cache
 C:\Users\leen.almahth\source\repos\First-API\School_api\obj\Debug\net8.0\ref\School_api.dll
+C:\Users\leen.almahth\source\repos\First-API\School_api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
