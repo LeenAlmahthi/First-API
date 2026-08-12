@@ -1,18 +1,18 @@
 ﻿using System;
+using Domain.Validation;
 using Domain.entity.course;
 using Domain.entity;
-namespace Domain.Validation;
-public class ValidationConfuseCourseStudents
+namespace Domain.Validation_;
+public class Validation
 {
-	public readonly ICourseRepository _courseRepository;
-	public ValidationConfuseCourseStudents(ICourseRepository courseRepository)
+	private readonly ValidationConfuseCourseStudents Valid;
+    public Validation(ValidationConfuseCourseStudents _Valid)
 	{
-		_courseRepository = courseRepository;
+		Valid = _Valid;
     }
-    public bool Validate(Course course, Students student)
+	public bool ValidateCourse(Course course, Students student)
 	{
-		if (_courseRepository.check_course_students_sameMatrial(student.Id ,course.Name) || _courseRepository.check_course_students_sameTime(student.Id, course.CourseTime))
-			throw new Exception("There is a conflict between the courses and the students.");
-		return true;
+		return Valid.Validate(course, student);
     }
+
 }
