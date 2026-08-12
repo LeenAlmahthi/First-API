@@ -13,3 +13,10 @@ obj/
 # Configuration files
 appsettings.json
 appsettings.Development.json
+
+# Visual Studio / VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
