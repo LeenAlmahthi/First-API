@@ -24,7 +24,7 @@ public class sqlIEnrollmentRepository : IEnrollmentRepository
         enrollment.IdCourse = course.Id;
         enrollment.NameStudent = students.FirstName;
         enrollment.NameCourse = course.Name;
-        _data.Enrollments.Add(enrollment);
+        _data.Enrollment.Add(enrollment);
         _data.SaveChanges();
         return enrollment.Id;
     }

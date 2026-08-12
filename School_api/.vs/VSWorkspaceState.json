@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Application",
+    "\\Application\\Courses",
+    "\\Application\\Interfaces",
+    "\\Domain",
+    "\\Domain\\Validation",
+    "\\Infrastructure",
+    "\\Infrastructure\\Data",
+    "\\Infrastructure\\SqlInterface",
+    "\\Presentation"
+  ],
+  "SelectedNode": "\\Domain\\entity\\CreateEnrollmentRequest.cs",
+  "PreviewInSolutionExplorer": false
+}

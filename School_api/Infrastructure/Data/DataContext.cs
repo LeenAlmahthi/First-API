@@ -17,7 +17,6 @@ namespace School_api.Data
          */
         public DbSet<Students> Students { get; set;}
         public DbSet<Course> Courses { get; set; }
-        public DbSet<Payment> payments { get; set; }
         public DbSet<Enrollment> Enrollment { get; set; }
 
 

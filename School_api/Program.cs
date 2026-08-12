@@ -35,6 +35,9 @@ builder.Services
 // Repository
 builder.Services.AddScoped<ICourseRepository, sqlICourseRepository>();
 builder.Services.AddScoped<IStudentRepository, sqlIStudentRepository>();
+builder.Services.AddScoped<IEnrollmentRepository, sqlIEnrollmentRepository>();
+
+builder.Services.AddScoped<CreateEnrollment>();
 
 // Application services
 builder.Services.AddScoped<CreateStudent>();

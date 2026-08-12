@@ -1,4 +1,7 @@
 ﻿using System;
+using Domain.entity;
+using Domain.entity.course;
+
 
 public class CreateEnrollment
 {
