@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Application",
+    "\\Domain",
+    "\\Domain\\entity",
+    "\\Infrastructure",
+    "\\Infrastructure\\Data",
+    "\\Infrastructure\\SqlInterface",
+    "\\Presentation",
+    "\\Presentation\\Controllers"
+  ],
+  "SelectedNode": "\\Presentation\\Controllers\\authApplicationController.cs",
+  "PreviewInSolutionExplorer": false
+}

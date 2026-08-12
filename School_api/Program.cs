@@ -39,6 +39,7 @@ builder.Services.AddScoped<IStudentRepository, sqlIStudentRepository>();
 // Application services
 builder.Services.AddScoped<CreateStudent>();
 builder.Services.AddScoped<ShowStudents>();
+builder.Services.AddScoped<DeleteStudent>();
 
 builder.Services.AddScoped<ShowCourse>(); 
 builder.Services.AddScoped<CreateCourse>(); 

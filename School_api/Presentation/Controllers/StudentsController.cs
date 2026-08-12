@@ -14,10 +14,12 @@ namespace School_api.Controllers
     {
         private readonly ShowStudents showStudents; 
         private readonly CreateStudent createStudent; 
-        public StudentsController(ShowStudents _ShowStudents, CreateStudent _createStudent)
+        private readonly DeleteStudent deleteStudent;
+        public StudentsController(ShowStudents _ShowStudents, CreateStudent _createStudent, DeleteStudent _deleteStudent)
         {
             showStudents = _ShowStudents;
             createStudent = _createStudent;
+            deleteStudent = _deleteStudent;
         }
         /// pbliv
         /// xml decumention 
@@ -72,17 +74,14 @@ namespace School_api.Controllers
         //    return Ok(q);
 
         //}
-        //[HttpDelete("{id}")]
+        [HttpDelete("{id}")]
         //[Authorize(Roles = "Admin")]
-        //public IActionResult delete_student(int id)
-        //{
-        //    var q = data.Students.Find(id);
-        //    if (q == null)
-        //        return NotFound();
-        //    data.Remove(q);
-        //    data.SaveChanges();
-        //    return Ok();
-
-        //}
+        public IActionResult delete_student(int id)
+        {
+            var re = deleteStudent.delete(id);
+            if (re == null)
+                return NotFound();
+            return Ok(re);
+        }
     }
 }

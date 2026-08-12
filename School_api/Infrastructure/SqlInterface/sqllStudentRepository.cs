@@ -34,4 +34,13 @@ public class sqlIStudentRepository : IStudentRepository
         Data.SaveChanges();
         return re;
     }
+    public Students? deleteStudent(int id)
+    {
+        var re = Data.Students.Find(id);
+        if (re == null)
+            return null;
+        Data.Students.Remove(re);
+        Data.SaveChanges();
+        return re;
+    }
 }
