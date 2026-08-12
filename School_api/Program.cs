@@ -32,12 +32,20 @@ builder.Services
 // Dependency Injection
 // ============================================================
 
-// Repository
+// Repositories
+builder.Services.AddScoped<IAuthRepository, usermanager>();
+builder.Services.AddScoped<IGenerateJwt, GenerateJwt>();
 builder.Services.AddScoped<ICourseRepository, sqlICourseRepository>();
 builder.Services.AddScoped<IStudentRepository, sqlIStudentRepository>();
 builder.Services.AddScoped<IEnrollmentRepository, sqlIEnrollmentRepository>();
 
 builder.Services.AddScoped<CreateEnrollment>();
+builder.Services.AddScoped<SignUp>();
+builder.Services.AddScoped<SignIn>();
+builder.Services.AddScoped<Delete>();
+
+
+
 
 // Application services
 builder.Services.AddScoped<CreateStudent>();

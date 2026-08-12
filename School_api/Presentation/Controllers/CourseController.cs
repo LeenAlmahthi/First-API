@@ -23,7 +23,8 @@ public class CourseController : ControllerBase
 
 }
 	[HttpPost]
-	public IActionResult PostCourse(Course course)
+    [Authorize(Roles = "student")]
+    public IActionResult PostCourse(Course course)
 	{
 		try
 		{
@@ -46,7 +47,8 @@ public class CourseController : ControllerBase
 		}
     }
 	[HttpDelete]
-	public IActionResult Delete(int id)
+    [Authorize(Roles = "student")]
+    public IActionResult Delete(int id)
 	{
 		deleteCourse.Delete(id);
 		return Ok("Delete Done");

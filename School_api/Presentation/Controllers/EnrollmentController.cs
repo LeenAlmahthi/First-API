@@ -20,6 +20,7 @@ public class EnrollmentController : ControllerBase
 
     }
     [HttpPost]
+    [Authorize(Roles = "student")]
     public IActionResult Post(CreateEnrollmentRequest request)
     {
         try

@@ -21,34 +21,13 @@ namespace School_api.Controllers
             createStudent = _createStudent;
             deleteStudent = _deleteStudent;
         }
-        /// pbliv
-        /// xml decumention 
-        /// error handle 
-        /// arthercter  (injection )
-        /// </summary>
-        /// <returns></returns>
         [HttpGet]
-        //[Authorize(Roles = "student")]
         public IActionResult get_Student()
         {
             return Ok(showStudents.show());
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        //[HttpGet("{id}")]
-        //[Authorize (Roles = "student")]
-        //public IActionResult get_Student(int id)
-        //{
-        //    var tmp = data.Students.Find(id);
-        //    if (tmp == null)
-        //        return NotFound();
-        //    return Ok(tmp);
-        //}
         [HttpPost]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public IActionResult post_Student(Students s)
         {
             if (s == null)
@@ -58,24 +37,8 @@ namespace School_api.Controllers
                 return NotFound();
             return Ok(re);
         }
-        //[HttpPut("{id}")]
-        //[Authorize(Roles = "Admin")]
-        //public IActionResult update_student(int id ,Students s)
-        //{
-        //    if (s == null)
-        //        return NotFound();
-        //    var q = data.Students.Find(id);
-        //    if (q == null)
-        //        return NotFound();
-        //    q.Id = id;
-        //    q.FirstName = s.FirstName;
-        //    //q.Age = s.Age;
-        //    data.SaveChanges();
-        //    return Ok(q);
-
-        //}
         [HttpDelete("{id}")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public IActionResult delete_student(int id)
         {
             var re = deleteStudent.delete(id);

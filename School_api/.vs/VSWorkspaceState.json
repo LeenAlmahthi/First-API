@@ -3,14 +3,15 @@
     "",
     "\\Application",
     "\\Application\\Courses",
-    "\\Application\\Interfaces",
+    "\\Application\\enrollment",
+    "\\Application\\Student",
     "\\Domain",
-    "\\Domain\\Validation",
+    "\\Domain\\entity",
     "\\Infrastructure",
-    "\\Infrastructure\\Data",
     "\\Infrastructure\\SqlInterface",
-    "\\Presentation"
+    "\\Presentation",
+    "\\Presentation\\Controllers"
   ],
-  "SelectedNode": "\\Domain\\entity\\CreateEnrollmentRequest.cs",
+  "SelectedNode": "\\Domain",
   "PreviewInSolutionExplorer": false
 }
