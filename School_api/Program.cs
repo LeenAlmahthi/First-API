@@ -121,7 +121,16 @@ builder.Services.AddAuthorization();
 // ============================================================
 
 builder.Services.AddControllers();
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy
+            .WithOrigins("http://127.0.0.1:5501")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 
 // ============================================================
 // Swagger
@@ -163,7 +172,7 @@ using (var scope = app.Services.CreateScope())
 
 //app.UseHttpsRedirection();
 
-
+app.UseCors("AllowFrontend");
 // Authentication MUST come before Authorization
 app.UseAuthentication();
 

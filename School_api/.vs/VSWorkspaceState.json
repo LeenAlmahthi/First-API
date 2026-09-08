@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Application",
+    "\\Application\\Athu",
+    "\\Domain",
+    "\\Infrastructure",
+    "\\Infrastructure\\Data",
+    "\\Infrastructure\\Identity",
+    "\\Infrastructure\\SqlInterface",
+    "\\Presentation",
+    "\\Presentation\\Controllers"
+  ],
+  "SelectedNode": "\\Program.cs",
+  "PreviewInSolutionExplorer": false
+}

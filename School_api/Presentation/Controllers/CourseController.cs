@@ -23,7 +23,7 @@ public class CourseController : ControllerBase
 
 }
 	[HttpPost]
-    [Authorize(Roles = "student")]
+    //[Authorize(Roles = "student")]
     public IActionResult PostCourse(Course course)
 	{
 		try
