@@ -12,6 +12,7 @@ obj/
 
 # Configuration files
 appsettings.json
+.editorconfig
 appsettings.Development.json
 
 # Visual Studio / VS Code
