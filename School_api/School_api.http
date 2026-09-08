@@ -1,6 +1,0 @@
-@School_api_HostAddress = http://localhost:5025
-
-GET {{School_api_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
