@@ -31,10 +31,11 @@ builder.Services
 // ============================================================
 // Dependency Injection
 // ============================================================
-
+builder.Services.AddScoped<CreateAvalibleCourse>();
 // Repositories
 builder.Services.AddScoped<IAuthRepository, usermanager>();
 builder.Services.AddScoped<IGenerateJwt, GenerateJwt>();
+builder.Services.AddScoped<IAvailableCourseRepository, sqlIAvailsbleCourseRepository>();
 builder.Services.AddScoped<ICourseRepository, sqlICourseRepository>();
 builder.Services.AddScoped<IStudentRepository, sqlIStudentRepository>();
 builder.Services.AddScoped<IEnrollmentRepository, sqlIEnrollmentRepository>();
