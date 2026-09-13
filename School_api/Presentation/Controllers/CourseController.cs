@@ -47,7 +47,7 @@ public class CourseController : ControllerBase
 		}
     }
 	[HttpDelete]
-    [Authorize(Roles = "student")]
+    // [Authorize(Roles = "student")]
     public IActionResult Delete(int id)
 	{
 		deleteCourse.Delete(id);
