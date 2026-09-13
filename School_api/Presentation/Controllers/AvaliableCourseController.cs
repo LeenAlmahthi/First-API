@@ -12,15 +12,15 @@ using School_api.Data;
 public class AvaliableCourseController : ControllerBase
 {
 	private readonly CreateAvalibleCourse createCourse;
-	//private readonly DeleteCourse deleteCourse;
-	//private readonly ShowCourse showCourse;
+	private readonly DeleteAvalibleCourse deleteCourse;
+	private readonly ShowAvalibleCourse showCourse;
     
     //public CourseController(CreateCourse _createCourse, DeleteCourse _deleteCourse, ShowCourse _ShowCourse)
-    public AvaliableCourseController(CreateAvalibleCourse _createCourse)
+    public AvaliableCourseController(CreateAvalibleCourse _createCourse, ShowAvalibleCourse _ShowCourse , DeleteAvalibleCourse _deleteCourse)
 	{
 		createCourse = _createCourse;
-		//deleteCourse = _deleteCourse;
-		//showCourse = _ShowCourse;
+		deleteCourse = _deleteCourse;
+		showCourse = _ShowCourse;
     }
 	[HttpPost]
     //[Authorize(Roles = "student")]
@@ -30,8 +30,6 @@ public class AvaliableCourseController : ControllerBase
 		{
             //_student.
             // Implement this method to retrieve the student from the request context
-            //Console.WriteLine($"Received course: {course.Id}, {course.SectionId}, {course.Name}, {course.DoctorId}, {course.CourseTime}, {course.Price}");
-
             if (createCourse.PostAvailableCourse(course))
             {
                 return Ok("Course created successfully.");
@@ -46,21 +44,22 @@ public class AvaliableCourseController : ControllerBase
 			return StatusCode(500, $"Internal server error: {ex.Message}");
 		}
     }
-	//[HttpDelete]
- //   [Authorize(Roles = "student")]
- //   public IActionResult Delete(int id)
-	//{
-	//	deleteCourse.Delete(id);
-	//	return Ok("Delete Done");
+    [HttpDelete]
+    //[Authorize(Roles = "student")]
+    public IActionResult Delete(int id)
+    {
+        deleteCourse.Delete(id);
+        return Ok("Delete Done");
 
- //   }
-	//[HttpGet]
-	//public IActionResult Show()
-	//{
-	//	var re = showCourse._ShowCourse();
-	//	if (re == null)
-	//		return NotFound();
-	//	return Ok(re);
+    }
 
- //   }
+    [HttpGet]
+    public IActionResult Show()
+    {
+        var re = showCourse._ShowCourse();
+        if (re == null)
+            return NotFound();
+        return Ok(re);
+
+    }
 }

@@ -32,6 +32,9 @@ builder.Services
 // Dependency Injection
 // ============================================================
 builder.Services.AddScoped<CreateAvalibleCourse>();
+builder.Services.AddScoped<ShowAvalibleCourse>();
+builder.Services.AddScoped<DeleteAvalibleCourse>();
+
 // Repositories
 builder.Services.AddScoped<IAuthRepository, usermanager>();
 builder.Services.AddScoped<IGenerateJwt, GenerateJwt>();

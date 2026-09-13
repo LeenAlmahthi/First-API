@@ -10,7 +10,8 @@ public class CreateAvalibleCourse
     }
     public bool PostAvailableCourse(AvailableCourse course)
 	{
-		if (course == null)
+        Console.WriteLine("in app is  ", course);
+        if (course == null)
 		{
 			throw new ArgumentNullException(nameof(course));
 		}
