@@ -11,9 +11,9 @@ obj/
 *.http
 
 # Configuration files
-appsettings.json
-.editorconfig
-appsettings.Development.json
+# appsettings.json
+# .editorconfig
+# appsettings.Development.json
 
 # Visual Studio / VS Code
 .vscode/
